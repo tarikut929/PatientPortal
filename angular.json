@@ -108,6 +108,7 @@
   },
   "defaultProject": "patient-portal",
   "cli": {
+    "analytics": "06dee1b2-3c98-4f91-bbca-c66482d5bd46",
     "packageManager": "npm"
   }
 }
