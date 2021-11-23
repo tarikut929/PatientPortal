@@ -7,10 +7,7 @@ import { AccountService } from 'app/core/auth/account.service';
 
 @Component({
   selector: 'jhi-user-profile',
-  template: `
-    <h1>Hello World!</h1>
-    <p>This template definition spans multiple lines.</p>
-  `,
+  templateUrl: './user-profile.component.html',
 })
 export class NewUserProfileComponent implements OnInit {
   account: Account | null = null;

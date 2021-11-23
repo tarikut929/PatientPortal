@@ -4,14 +4,13 @@ import { RouterModule } from '@angular/router';
 import { errorRoute } from './layouts/error/error.route';
 import { navbarRoute } from './layouts/navbar/navbar.route';
 import { DEBUG_INFO_ENABLED } from 'app/app.constants';
-import { NewUserProfileRoute } from './newuserprofile/user-profile.route';
 import { NewUserProfileComponent } from './newuserprofile/user-profile.component';
 
 import { Authority } from 'app/config/authority.constants';
 
 import { UserRouteAccessService } from 'app/core/auth/user-route-access.service';
 
-const LAYOUT_ROUTES = [navbarRoute, NewUserProfileRoute, ...errorRoute];
+const LAYOUT_ROUTES = [navbarRoute, ...errorRoute];
 
 @NgModule({
   imports: [
