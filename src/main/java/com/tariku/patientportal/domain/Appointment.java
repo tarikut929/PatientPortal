@@ -135,5 +135,3 @@ public class Appointment implements Serializable {
         );
     }
 }
-
-public class Appointment {}
