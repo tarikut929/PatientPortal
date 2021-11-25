@@ -1,3 +1,3 @@
-export class Appointment {
-  constructor(public id: number, public firstname: string) {}
+export interface Appointment {
+  data: string[];
 }

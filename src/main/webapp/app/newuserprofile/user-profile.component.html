@@ -23,14 +23,14 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let appointment of appointments; trackBy: trackId">
-          <td>{{ appointment.id }}</td>
-          <td>{{ appointment.reason }}</td>
-          <td>{{ appointment.insuranceChange }}</td>
-          <td>{{ appointment.phoneNumber }}</td>
+        <tr *ngFor="let dat of data">
+          <td>{{ dat.id }}</td>
+          <td>{{ dat.name }}</td>
+          <td>{{ dat.username }}</td>
+          <td>{{ dat.email }}</td>
         </tr>
       </tbody>
     </table>
   </div>
-  ddd
+  <div></div>
 </div>
