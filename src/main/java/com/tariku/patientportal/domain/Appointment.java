@@ -1,3 +1,5 @@
+package com.tariku.patientportal.domain;
+
 import java.io.Serializable;
 import java.util.Objects;
 import javax.persistence.Column;
