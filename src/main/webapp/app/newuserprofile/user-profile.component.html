@@ -34,7 +34,7 @@
 
 <ng-template #content let-modal>
   <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+    <h4 class="modal-title" id="modal-basic-title">Create Appointment</h4>
     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -42,9 +42,23 @@
   <div class="modal-body">
     <form>
       <div class="form-group">
-        <label for="dateOfBirth">Date of birth</label>
+        <label for="reason">Reason</label>
         <div class="input-group">
-          <input id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd" name="dp" />
+          <input id="reason" class="form-control" placeholder="you reason" name="dp" />
+          <div class="input-group-append"></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="insuranceChange">Insurance Change</label>
+        <div class="input-group">
+          <input id="insuranceChange" class="form-control" placeholder="Your Insurance change" name="dp" />
+          <div class="input-group-append"></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number</label>
+        <div class="input-group">
+          <input id="phoneNumber" class="form-control" placeholder="0912..." name="dp" />
           <div class="input-group-append"></div>
         </div>
       </div>

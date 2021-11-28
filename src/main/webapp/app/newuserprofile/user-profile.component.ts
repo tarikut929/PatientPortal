@@ -53,6 +53,7 @@ export class NewUserProfileComponent implements OnInit {
       return `with: ${reason}`;
     }
   }
+  onSubmit() {}
 
   /* eslint-enable */
 }
