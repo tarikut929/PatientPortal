@@ -40,31 +40,29 @@
     </button>
   </div>
   <div class="modal-body">
-    <form>
-      <div class="form-group">
-        <label for="reason">Reason</label>
-        <div class="input-group">
-          <input id="reason" class="form-control" placeholder="you reason" name="dp" />
-          <div class="input-group-append"></div>
+    <div>
+      <form [formGroup]="formdata" (ngSubmit)="onClickSubmit(formdata.value)">
+        <div class="form-group">
+          <label class="form-control-label" for="field_reason">Reason</label>
+          <input type="text" class="form-control fortextbox" name="reason" formControlName="reason" />
         </div>
-      </div>
-      <div class="form-group">
-        <label for="insuranceChange">Insurance Change</label>
-        <div class="input-group">
-          <input id="insuranceChange" class="form-control" placeholder="Your Insurance change" name="dp" />
-          <div class="input-group-append"></div>
+        <div class="form-group">
+          <label class="form-control-label" for="field_insuranceChange">Insurance Change</label>
+          <input type="text" class="form-control fortextbox" name="insuranceChange" formControlName="insuranceChange" />
         </div>
-      </div>
-      <div class="form-group">
-        <label for="phoneNumber">Phone Number</label>
-        <div class="input-group">
-          <input id="phoneNumber" class="form-control" placeholder="0912..." name="dp" />
-          <div class="input-group-append"></div>
+        <div class="form-group">
+          <label class="form-control-label" for="field_phoneNumber">Phone Number</label>
+          <input type="text" class="form-control fortextbox" name="phoneNumber" formControlName="phoneNumber" />
         </div>
-      </div>
-    </form>
-  </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
+
+        <div class="modal-footer">
+          <input type="submit" class="forsubmit btn btn-success" value="Log In" (click)="modal.close('Save click')" />
+        </div>
+      </form>
+    </div>
   </div>
 </ng-template>
+
+<!--
+  
+-->

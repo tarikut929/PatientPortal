@@ -7,7 +7,7 @@ import { NewUserProfileRoute } from './user-profile.route';
 
 @NgModule({
   imports: [RouterModule.forRoot([NewUserProfileRoute], { useHash: true }), CommonModule],
-  declarations: [NewUserProfileComponent],
+  declarations: [],
   entryComponents: [],
   providers: [],
 })

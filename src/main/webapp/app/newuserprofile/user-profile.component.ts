@@ -1,20 +1,32 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { Account } from 'app/core/auth/account.model';
 import { AccountService } from 'app/core/auth/account.service';
 import { AppointmentService } from './appointment.service';
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { FormGroup, FormControl } from '@angular/forms';
+import { Appointment } from './appointment';
 
 @Component({
   selector: 'jhi-user-profile',
   templateUrl: './user-profile.component.html',
 })
 export class NewUserProfileComponent implements OnInit {
+  appointment: Appointment = new Appointment();
   closeResult = 'close';
   account: Account | null = null;
   data: any[] = [];
+
+  title = 'My Angular Project!';
+  todaydate: any;
+  componentproperty: any;
+  reason: any;
+  phoneNumber: any;
+  insuranceChange: any;
+  formdata: any;
 
   /* eslint-disable */
 
@@ -31,6 +43,11 @@ export class NewUserProfileComponent implements OnInit {
 
   ngOnInit(): void {
     this.accountService.getAuthenticationState().subscribe(account => (this.account = account));
+    this.formdata = new FormGroup({
+      reason: new FormControl(''),
+      insuranceChange: new FormControl(''),
+      phoneNumber: new FormControl(''),
+    });
   }
 
   open(content: any) {
@@ -53,7 +70,12 @@ export class NewUserProfileComponent implements OnInit {
       return `with: ${reason}`;
     }
   }
-  onSubmit() {}
-
-  /* eslint-enable */
+  onClickSubmit(data: any) {
+    this.appointment.reason = data.reason;
+    this.appointment.phoneNumber = data.phoneNumber;
+    this.appointment.insuranceChange = data.insuranceChange;
+    console.warn(this.appointment);
+  }
 }
+
+/* eslint-enable */

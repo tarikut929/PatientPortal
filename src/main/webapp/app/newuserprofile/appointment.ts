@@ -1,3 +1,5 @@
-export interface Appointment {
-  data: string[];
+export class Appointment {
+  reason!: string;
+  phoneNumber!: string;
+  insuranceChange!: string;
 }
