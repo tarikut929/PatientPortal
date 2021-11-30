@@ -38,6 +38,7 @@ export class NewUserProfileComponent implements OnInit {
   ) {
     this.appointmentService.getData().subscribe(data => {
       this.data = Object.values(data);
+      console.warn(data);
     });
   }
 

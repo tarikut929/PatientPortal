@@ -12,12 +12,12 @@ export class AppointmentService {
   private baseURL = 'api/appointments';
 
   constructor(private http: HttpClient) {}
-  getData() {
+  getDatae() {
     let url = 'http://jsonplaceholder.typicode.com/users';
     return this.http.get(url);
     /* eslint-enable */
   }
-  getAppointmentList(): Observable<Appointment[]> {
+  getData(): Observable<Appointment[]> {
     return this.http.get<Appointment[]>(`${this.baseURL}`);
   }
   createAppointment(appointment: Appointment): Observable<any> {
