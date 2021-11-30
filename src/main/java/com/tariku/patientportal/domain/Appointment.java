@@ -34,7 +34,7 @@ public class Appointment implements Serializable {
 
     @NotNull
     @Column(name = "insurance_change", nullable = false)
-    private Boolean insuranceChange;
+    private String insuranceChange;
 
     @NotNull
     @Column(name = "phone_number", nullable = false)
@@ -69,16 +69,16 @@ public class Appointment implements Serializable {
         this.reason = reason;
     }
 
-    public Boolean isInsuranceChange() {
+    public String isInsuranceChange() {
         return insuranceChange;
     }
 
-    public Appointment insuranceChange(Boolean insuranceChange) {
+    public Appointment insuranceChange(String insuranceChange) {
         this.insuranceChange = insuranceChange;
         return this;
     }
 
-    public void setInsuranceChange(Boolean insuranceChange) {
+    public void setInsuranceChange(String insuranceChange) {
         this.insuranceChange = insuranceChange;
     }
 

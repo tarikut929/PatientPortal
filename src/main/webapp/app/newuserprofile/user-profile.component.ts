@@ -75,6 +75,16 @@ export class NewUserProfileComponent implements OnInit {
     this.appointment.phoneNumber = data.phoneNumber;
     this.appointment.insuranceChange = data.insuranceChange;
     console.warn(this.appointment);
+    this.saveAppointment();
+  }
+  saveAppointment() {
+    this.appointmentService.createAppointment(this.appointment).subscribe(
+      data => {},
+      error => console.log(error)
+    );
+  }
+  goToAppointmentList() {
+    this.router.navigate(['/newuserprofile']);
   }
 }
 

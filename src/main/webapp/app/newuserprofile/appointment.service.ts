@@ -9,11 +9,18 @@ import { Appointment } from './appointment';
 })
 export class AppointmentService {
   /* eslint-disable */
+  private baseURL = 'http://localhost:8080/newuserprofile';
 
   constructor(private http: HttpClient) {}
   getData() {
     let url = 'http://jsonplaceholder.typicode.com/users';
     return this.http.get(url);
     /* eslint-enable */
+  }
+  getAppointmentList(): Observable<Appointment[]> {
+    return this.http.get<Appointment[]>(`${this.baseURL}`);
+  }
+  createAppointment(appointment: Appointment): Observable<any> {
+    return this.http.post(`${this.baseURL}`, appointment);
   }
 }
