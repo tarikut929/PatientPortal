@@ -79,12 +79,14 @@ export class NewUserProfileComponent implements OnInit {
   }
   saveAppointment() {
     this.appointmentService.createAppointment(this.appointment).subscribe(
-      data => {},
+      data => {
+        console.log(data);
+      },
       error => console.log(error)
     );
   }
   goToAppointmentList() {
-    this.router.navigate(['/newuserprofile']);
+    this.router.navigate(['/appointments']);
   }
 }
 

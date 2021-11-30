@@ -9,7 +9,7 @@ import { Appointment } from './appointment';
 })
 export class AppointmentService {
   /* eslint-disable */
-  private baseURL = 'http://localhost:8080/newuserprofile';
+  private baseURL = 'api/appointments';
 
   constructor(private http: HttpClient) {}
   getData() {
